@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <title>운영체제 정보와 화면 크기 알아내기</title>
+</head>
+<body>
+    <div id="info"></div>
+
+    <script>
+    var system = function(){
+      var os = navigator.userAgent.toLowerCase();
+      var info = document.getElementById("info");
+
+      if(os.indexOf('windows') >= 0){
+          info.innerHTML = "현재 윈도우 사용 중 입니다.";
+
+      } else if(os.indexOf('macintosh') >= 0){
+          info.innerHTML = "현재 맥 사용 중 입니다.";
+      } else if(os.indexOf('iphone') >= 0){
+          info.innerHTML = "현재 아이폰 사용 중 입니다.";
+      } else if(os.indexOf('android') >= 0){
+          info.innerHTML = "현재 안드로이드 폰 사용 중 입니다.";
+      }
+      document.getElementById('info').innerHTML = '<p></p>'
+    }
+    </script>
+</body>
+</html>
