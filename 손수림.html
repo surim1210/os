@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="ko-KR">
+<head>
+    <meta charset="UTF-8">
+    <title>os</title>
+</head>
+<body>
+   <div id="info"><button type="button" onclick="check();">check</button></div>
+
+
+
+    <script>
+    var check = function(){
+      var os_nav = navigator.userAgent.toLowerCase();
+      var info = document.getElementById("info");
+
+      if(os_nav.indexOf('windows') >= 0){
+          info.innerHTML = "현재 윈도우 사용 중 입니다." + "<img src =\'http://pds20.egloos.com/pds/201101/26/91/a0090091_4d3fcb67687c5.jpg\'>";
+
+      }
+      else if(os_nav.indexOf('macintosh') >= 0){
+          info.innerHTML = "현재 맥 사용 중 입니다." +"<img src = \'https://t1.daumcdn.net/cfile/tistory/26199735550AEAD80D\'>";
+      }
+      else if(os_nav.indexOf('iphone') >= 0){
+          info.innerHTML = "현재 아이폰 사용 중 입니다.";
+      }
+      else if(os_nav.indexOf('android') >= 0){
+          info.innerHTML = "현재 안드로이드 폰 사용 중 입니다.";
+      }
+
+    }
+    document.getElementById('info').onclick = check;
+    </script>
+</body>
+</html>
